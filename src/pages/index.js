@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader() {
   return (
@@ -34,7 +35,7 @@ function HeroScreenshot() {
             <span className="browser-dot" style={{background: '#28c840'}} />
           </div>
           <img
-            src="/img/kedrogy-gif.gif"
+            src={useBaseUrl('/img/kedrogy-gif.gif')}
             alt="Kedrogy in action"
             className="showcase-img"
           />
@@ -45,6 +46,7 @@ function HeroScreenshot() {
 }
 
 function FeatureSection({title, description, imgSrc, imgAlt, reverse}) {
+  const resolvedSrc = useBaseUrl(imgSrc);
   return (
     <section className="feature-section">
       <div className="container">
@@ -60,7 +62,7 @@ function FeatureSection({title, description, imgSrc, imgAlt, reverse}) {
                 <span className="browser-dot" style={{background: '#febc2e'}} />
                 <span className="browser-dot" style={{background: '#28c840'}} />
               </div>
-              <img src={imgSrc} alt={imgAlt} className="showcase-img" />
+              <img src={resolvedSrc} alt={imgAlt} className="showcase-img" />
             </div>
           </div>
         </div>
@@ -150,14 +152,14 @@ export default function Home() {
         <FeatureSection
           title="Dataset Management"
           description="Create and manage ML datasets through an intuitive web interface. Configure Kedro pipelines, Prodigy annotation recipes, and data sources all in one place. Track labeling status across your entire project."
-          imgSrc="/img/models-datasets.png"
+          imgSrc="img/models-datasets.png"
           imgAlt="Datasets and models overview"
         />
 
         <FeatureSection
           title="Create & Configure"
           description="Spin up new datasets and models in seconds. Specify your Docker image, Kedro pipeline, data table, and Prodigy recipe options through a clean form interface."
-          imgSrc="/img/create-new.png"
+          imgSrc="img/create-new.png"
           imgAlt="Create a new dataset"
           reverse
         />
@@ -165,14 +167,14 @@ export default function Home() {
         <FeatureSection
           title="Dataset Details"
           description="Inspect every detail of your dataset configuration. See the Docker image, working directory, pipeline, recipe options, and labeling status at a glance. Launch annotation with one click."
-          imgSrc="/img/dataset-info.png"
+          imgSrc="img/dataset-info.png"
           imgAlt="Dataset detail view"
         />
 
         <FeatureSection
           title="Model Training & Serving"
           description="Train models directly from annotated data and deploy them to Kubernetes with one click. Monitor training status, serve models, and run live predictions through the built-in text classification interface."
-          imgSrc="/img/model-details.png"
+          imgSrc="img/model-details.png"
           imgAlt="Model details and prediction"
           reverse
         />
