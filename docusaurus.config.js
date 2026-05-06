@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://kedrogy.ysz.vc',
+  url: 'https://millafedotova.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/kedrogy-landing/',
 
   // GitHub pages deployment config.
-  organizationName: 'ysz',
-  projectName: 'kedrogy',
+  organizationName: 'millafedotova',
+  projectName: 'kedrogy-landing',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
