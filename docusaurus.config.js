@@ -13,6 +13,16 @@ const config = {
   title: 'Kedrogy',
   tagline: 'Orchestrate ML datasets and models with ease',
   favicon: 'img/favicon.ico',
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/kedrogy-landing/img/apple-touch-icon.png',
+      },
+    },
+  ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
